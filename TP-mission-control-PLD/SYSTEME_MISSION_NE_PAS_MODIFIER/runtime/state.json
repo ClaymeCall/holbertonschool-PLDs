@@ -1,0 +1,87 @@
+{
+  "version": 3,
+  "startedAt": "2026-08-26T15:04:02.270Z",
+  "launchWindowSeconds": 10800,
+  "mode": "simulation",
+  "buildSha": "local",
+  "gates": {
+    "mass": {
+      "status": "NO_GO",
+      "note": "Baseline à mesurer"
+    },
+    "safety": {
+      "status": "NO_GO",
+      "note": "UID / health non validés"
+    },
+    "control": {
+      "status": "UNKNOWN",
+      "note": "Contrôles PR non vérifiés"
+    },
+    "compat": {
+      "status": "UNKNOWN",
+      "note": "Matrix non certifiée"
+    },
+    "security": {
+      "status": "LOCKED",
+      "note": "En attente du build / scan"
+    },
+    "release": {
+      "status": "LOCKED",
+      "note": "Chemin registry verrouillé"
+    }
+  },
+  "metrics": {
+    "baselineSizeMb": null,
+    "imageSizeMb": null,
+    "reductionPercent": null,
+    "buildSeconds": null,
+    "runtimeUid": null,
+    "health": "unknown"
+  },
+  "uplink": {
+    "workflow": "unknown",
+    "matrixPassed": 0,
+    "matrixTotal": 5,
+    "security": "locked",
+    "registry": "locked",
+    "branch": "local"
+  },
+  "directive": {
+    "code": "00",
+    "title": "BASELINE REQUIRED",
+    "message": "Mesurez le système avant toute optimisation."
+  },
+  "hintsUsed": {},
+  "incident": null,
+  "deepSpace": {
+    "unlocked": false,
+    "active": null,
+    "missions": {
+      "X1": {
+        "status": "LOCKED",
+        "note": "Flight Readiness 6/6 requis"
+      },
+      "X2": {
+        "status": "LOCKED",
+        "note": "Flight Readiness 6/6 requis"
+      },
+      "X3": {
+        "status": "LOCKED",
+        "note": "Flight Readiness 6/6 requis"
+      },
+      "X4": {
+        "status": "LOCKED",
+        "note": "Flight Readiness 6/6 requis"
+      },
+      "X5": {
+        "status": "LOCKED",
+        "note": "Flight Readiness 6/6 requis"
+      },
+      "X6": {
+        "status": "LOCKED",
+        "note": "Flight Readiness 6/6 requis"
+      }
+    },
+    "evidence": {}
+  }
+}

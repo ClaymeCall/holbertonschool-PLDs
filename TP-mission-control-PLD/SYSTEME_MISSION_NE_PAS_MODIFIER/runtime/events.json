@@ -1,0 +1,16 @@
+[
+  {
+    "time": "15:04:02",
+    "source": "SYSTEM",
+    "message": "Mission Control Orbiter-7 en ligne",
+    "level": "info",
+    "status": "NOMINAL"
+  },
+  {
+    "time": "15:04:02",
+    "source": "FLIGHT",
+    "message": "Qualification de release ouverte — maintien au sol actif",
+    "level": "warn",
+    "status": "HOLD"
+  }
+]
