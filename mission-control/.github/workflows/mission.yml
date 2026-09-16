@@ -1,0 +1,23 @@
+name: flight-control
+run-name: ${{github.actor}} triggered flight control
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  Flight-Control:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup-node
+        uses: actions/setup-node@v4
+
+      - name: install
+        run: npm ci
+
+      - name: lint-and-test-code
+        run: npm run check
