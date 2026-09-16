@@ -1,0 +1,6 @@
+{
+  "id": "RAD-106",
+  "title": "Contract Drift",
+  "topic": "Contrats entre agents",
+  "symptom": "ANALYST accepte un message SCOUT incomplet et continue silencieusement."
+}

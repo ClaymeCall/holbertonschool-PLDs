@@ -1,0 +1,32 @@
+{
+  "RAD-101": [
+    "Deux documents différents peuvent-ils représenter le même événement technique ?",
+    "Regardez l’identité qui circule avant ANALYST. Le titre seul est-il une identité stable ?",
+    "Cherchez une clé canonique déjà présente dans les fixtures (ou construisez-en une) plutôt qu’une comparaison de texte libre."
+  ],
+  "RAD-102": [
+    "Une date de mise à jour et une date de publication répondent-elles à la même question ?",
+    "Inspectez les champs de temps disponibles dans les sources avant de choisir celui qui définit la fraîcheur.",
+    "La fraîcheur doit privilégier la date de l’événement/release ou de publication ; updatedAt ne doit être qu’un fallback prudent."
+  ],
+  "RAD-104": [
+    "Toutes les sources ont-elles le même niveau d’autorité ?",
+    "Conservez la provenance jusqu’au moment où les affirmations contradictoires sont arbitrées.",
+    "Une hiérarchie explicite official > primary > secondary > community est une piste possible."
+  ],
+  "RAD-106": [
+    "Que se passe-t-il si SCOUT change un nom de champ sans prévenir ANALYST ?",
+    "Validez le message au passage de frontière, avant de poursuivre le pipeline.",
+    "Le contrat NewsItem doit refuser une entrée qui perd sourceUrl, provenance, date, faits ou confiance."
+  ],
+  "RAD-111": [
+    "Trois appels en parallèle sont-ils forcément plus rapides sur un seul modèle local ?",
+    "Mesurez la concurrence réelle puis imposez une politique d’accès au modèle.",
+    "Une file séquentielle ou une limite de concurrence à 1 suffit pour ce PLD ; pas besoin d’un scheduler complexe."
+  ],
+  "RAD-115": [
+    "Une donnée en cache peut être valide techniquement et trop vieille métier.",
+    "Transportez la date de récupération et appliquez une politique différente selon la catégorie.",
+    "Faites produire au cache au moins usable/stale et refusez les entrées dépassant leur maxAgeHours."
+  ]
+}

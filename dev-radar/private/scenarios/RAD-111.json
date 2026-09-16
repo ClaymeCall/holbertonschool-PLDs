@@ -1,0 +1,6 @@
+{
+  "id": "RAD-111",
+  "title": "The Model Stampede",
+  "topic": "Concurrence locale",
+  "symptom": "Les agents saturent le modele local avec des appels concurrents."
+}

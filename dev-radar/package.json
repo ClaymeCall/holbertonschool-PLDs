@@ -1,0 +1,33 @@
+{
+  "name": "dev-radar-zero-budget-intelligence",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node --watch working/app/server.js",
+    "doctor": "node private/doctor.js",
+    "radar": "node working/src/cli.js",
+    "test": "node --test working/tests/*.test.js",
+    "incident": "node private/cli.js incident",
+    "check": "node private/cli.js check",
+    "validate": "node private/cli.js validate",
+    "reset": "node private/cli.js reset",
+    "mcp": "node working/mcp/server.js",
+    "local:check": "node private/local-model-check.js",
+    "source:preview": "node working/src/source-preview.js",
+    "check:scout": "node private/foundation-cli.js scout",
+    "check:analyst": "node private/foundation-cli.js analyst",
+    "check:editor": "node private/foundation-cli.js editor",
+    "check:pipeline": "node private/foundation-cli.js pipeline",
+    "foundation": "node private/foundation-cli.js all",
+    "hint": "node private/cli.js hint",
+    "certify": "node private/cli.js certify",
+    "radar:live": "node working/src/live.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.29.0"
+  }
+}

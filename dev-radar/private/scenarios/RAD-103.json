@@ -1,0 +1,6 @@
+{
+  "id": "RAD-103",
+  "title": "Stable? Not Quite.",
+  "topic": "Stable vs prerelease",
+  "symptom": "Une beta est presentee comme une release stable."
+}

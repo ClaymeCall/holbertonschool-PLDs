@@ -1,0 +1,6 @@
+{
+  "id": "RAD-107",
+  "title": "Confidence Laundering",
+  "topic": "Propagation de confiance",
+  "symptom": "Une hypothese faible devient progressivement une certitude."
+}

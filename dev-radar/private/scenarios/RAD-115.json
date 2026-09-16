@@ -1,0 +1,6 @@
+{
+  "id": "RAD-115",
+  "title": "Split-Brain Radar",
+  "topic": "Cache et fraicheur",
+  "symptom": "Des donnees stale sont publiees comme si elles etaient fraiches."
+}

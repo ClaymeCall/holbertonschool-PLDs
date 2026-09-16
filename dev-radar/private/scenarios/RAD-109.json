@@ -1,0 +1,6 @@
+{
+  "id": "RAD-109",
+  "title": "Role Bleeding",
+  "topic": "Separation des responsabilites",
+  "symptom": "SCOUT filtre une information que seul ANALYST devait juger."
+}

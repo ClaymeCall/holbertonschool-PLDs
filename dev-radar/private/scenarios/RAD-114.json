@@ -1,0 +1,6 @@
+{
+  "id": "RAD-114",
+  "title": "Poisoned Changelog",
+  "topic": "Indirect prompt injection",
+  "symptom": "Une instruction malveillante cachee dans une source devient une instruction pour l agent."
+}

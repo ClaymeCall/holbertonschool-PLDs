@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "NewsItem",
+  "type": "object",
+  "required": [
+    "id",
+    "title",
+    "sourceUrl",
+    "sourceName",
+    "authority",
+    "publishedAt",
+    "origin",
+    "facts",
+    "confidence"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "sourceUrl": {
+      "type": "string"
+    },
+    "sourceName": {
+      "type": "string"
+    },
+    "authority": {
+      "enum": [
+        "official",
+        "primary",
+        "secondary",
+        "community",
+        "internal"
+      ]
+    },
+    "publishedAt": {
+      "type": "string"
+    },
+    "updatedAt": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "origin": {
+      "enum": [
+        "external",
+        "internal"
+      ]
+    },
+    "facts": {
+      "type": "object"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "id": "RAD-108",
+  "title": "Agent Telephone Game",
+  "topic": "Faits structures",
+  "symptom": "Le sujet d un changement est deforme entre ANALYST et EDITOR."
+}

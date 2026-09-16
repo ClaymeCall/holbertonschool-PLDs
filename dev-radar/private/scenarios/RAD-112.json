@@ -1,0 +1,6 @@
+{
+  "id": "RAD-112",
+  "title": "Cold Brain",
+  "topic": "Readiness locale",
+  "symptom": "Le premier chargement lent du modele est confondu avec une panne."
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "RAD-101",
+    "title": "Echo Chamber",
+    "topic": "Deduplication semantique",
+    "symptom": "Le brief publie plusieurs formulations du meme evenement.",
+    "wave": 1,
+    "xp": 100
+  },
+  {
+    "id": "RAD-102",
+    "title": "Back From The Dead",
+    "topic": "Fraicheur et dates",
+    "symptom": "Un ancien article mis a jour aujourd hui est presente comme une nouveaute.",
+    "wave": 1,
+    "xp": 100
+  },
+  {
+    "id": "RAD-103",
+    "title": "Stable? Not Quite.",
+    "topic": "Stable vs prerelease",
+    "symptom": "Une beta est presentee comme une release stable.",
+    "wave": 1,
+    "xp": 100
+  },
+  {
+    "id": "RAD-104",
+    "title": "Two Truths",
+    "topic": "Autorite des sources",
+    "symptom": "Une source communautaire alarmiste ecrase la source officielle.",
+    "wave": 1,
+    "xp": 100
+  },
+  {
+    "id": "RAD-105",
+    "title": "The Tiny Line",
+    "topic": "Compression sans perte critique",
+    "symptom": "La seule breaking change disparait pendant la reduction de contexte.",
+    "wave": 1,
+    "xp": 100
+  },
+  {
+    "id": "RAD-106",
+    "title": "Contract Drift",
+    "topic": "Contrats entre agents",
+    "symptom": "ANALYST accepte un message SCOUT incomplet et continue silencieusement.",
+    "wave": 2,
+    "xp": 100
+  },
+  {
+    "id": "RAD-107",
+    "title": "Confidence Laundering",
+    "topic": "Propagation de confiance",
+    "symptom": "Une hypothese faible devient progressivement une certitude.",
+    "wave": 2,
+    "xp": 100
+  },
+  {
+    "id": "RAD-108",
+    "title": "Agent Telephone Game",
+    "topic": "Faits structures",
+    "symptom": "Le sujet d un changement est deforme entre ANALYST et EDITOR.",
+    "wave": 2,
+    "xp": 100
+  },
+  {
+    "id": "RAD-109",
+    "title": "Role Bleeding",
+    "topic": "Separation des responsabilites",
+    "symptom": "SCOUT filtre une information que seul ANALYST devait juger.",
+    "wave": 2,
+    "xp": 100
+  },
+  {
+    "id": "RAD-110",
+    "title": "Self-Citation Loop",
+    "topic": "Lineage",
+    "symptom": "DEV RADAR finit par utiliser ses propres briefs comme preuves externes.",
+    "wave": 2,
+    "xp": 100
+  },
+  {
+    "id": "RAD-111",
+    "title": "The Model Stampede",
+    "topic": "Concurrence locale",
+    "symptom": "Les agents saturent le modele local avec des appels concurrents.",
+    "wave": 3,
+    "xp": 100
+  },
+  {
+    "id": "RAD-112",
+    "title": "Cold Brain",
+    "topic": "Readiness locale",
+    "symptom": "Le premier chargement lent du modele est confondu avec une panne.",
+    "wave": 3,
+    "xp": 100
+  },
+  {
+    "id": "RAD-113",
+    "title": "Context Copy Tax",
+    "topic": "Budget de contexte",
+    "symptom": "Chaque agent charge tout le contexte et duplique inutilement le compute.",
+    "wave": 3,
+    "xp": 100
+  },
+  {
+    "id": "RAD-114",
+    "title": "Poisoned Changelog",
+    "topic": "Indirect prompt injection",
+    "symptom": "Une instruction malveillante cachee dans une source devient une instruction pour l agent.",
+    "wave": 3,
+    "xp": 100
+  },
+  {
+    "id": "RAD-115",
+    "title": "Split-Brain Radar",
+    "topic": "Cache et fraicheur",
+    "symptom": "Des donnees stale sont publiees comme si elles etaient fraiches.",
+    "wave": 3,
+    "xp": 100
+  }
+]

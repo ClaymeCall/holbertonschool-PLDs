@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DEV RADAR - Zero Budget Intelligence</title><link rel="stylesheet" href="/styles.css"></head>
+<body>
+<div class="scan"></div>
+<header><div class="brand"><span class="radar-dot"></span><div><b>DEV RADAR</b><small>ZERO BUDGET INTELLIGENCE</small></div></div><div class="top-status"><span>LOCAL</span><strong id="topScore">CORE 0 / 6</strong></div></header>
+<nav><button class="nav active" data-view="mission">MISSION</button><button class="nav" data-view="pipeline">PIPELINE</button><button class="nav" data-view="ops">OPS ROOM</button><button class="nav" data-view="compute">COMPUTE</button></nav>
+<main>
+<section id="view-mission" class="view active">
+  <div class="hero"><p class="eyebrow">NORTHSTAR LABS // INTERNAL REQUEST</p><h1>Three agents.<br><em>Zero cloud.</em><br>Zero budget.</h1><p>Construisez une equipe locale capable de transformer un flux technique bruyant en un brief fiable, source et utile a des developpeurs.</p><div class="constraints"><span>0 EUR API</span><span>LOCAL LLM</span><span>3 DEVELOPPEURS</span><span>6 CORE + 9 BONUS</span></div></div>
+  <div class="brief-card"><h3>CONTRAT CTO</h3><ul><li>Pas de donnee sensible envoyee dans le cloud.</li><li>Sources et dates obligatoires.</li><li>React, Node.js, Python, Docker, GitHub Actions, Agentic AI.</li><li>60 s max, 8 appels LLM max, contexte borne.</li></ul></div>
+</section>
+<section id="view-pipeline" class="view"><div class="section-head"><p class="eyebrow">BUILD MODE</p><h2>L'equipe d'agents</h2><p>Le LLM local est un composant. La fiabilite vient des contrats, du contexte et des garde-fous.</p></div><div class="agents">
+  <article><span>01</span><h3>SCOUT</h3><p>Collecte, normalise, conserve la provenance.</p><code>sources -> NewsItem[]</code></article>
+  <div class="arrow">→</div><article><span>02</span><h3>ANALYST</h3><p>Classe selon le contexte entreprise.</p><code>NewsItem[] -> AnalysisItem[]</code></article>
+  <div class="arrow">→</div><article><span>03</span><h3>EDITOR</h3><p>Compose le brief sans reinterpreter les faits.</p><code>AnalysisItem[] -> brief.md</code></article>
+</div><div class="build-grid"><div><b>CONTEXT</b><p>Company Context + Memory + Skills minimums utiles.</p></div><div><b>MCP SOURCES</b><p>Tools read-only fournis pour les signaux techniques.</p></div><div><b>LOCAL BRAIN</b><p>Ollama sur la machine hote. Aucun token API payant.</p></div></div></section>
+<section id="view-ops" class="view"><div class="section-head"><p class="eyebrow">INCIDENT DAY</p><h2>OPS ROOM</h2><p>Les 6 incidents CORE sont la mission obligatoire. Les 9 bonus se debloquent apres la certification CORE.</p></div><div id="waves"></div></section>
+<section id="view-compute" class="view"><div class="section-head"><p class="eyebrow">LOCAL COMPUTEOPS</p><h2>Le token gratuit n'est pas gratuit.</h2><p>Pas de facture cloud, mais du temps, de la RAM et du contexte.</p></div><div class="metrics"><div><span>LLM CALLS</span><strong>≤ 8</strong></div><div><span>CONTEXT</span><strong>≤ 12K</strong></div><div><span>RUNTIME</span><strong>≤ 60s</strong></div><div><span>CONCURRENCY</span><strong>1</strong></div></div><div class="terminal"><div>$ npm run doctor</div><div>$ npm run incident -- RAD-101</div><div>$ npm run check -- RAD-101</div><div>$ npm run validate</div></div></section>
+</main>
+<div id="toast"></div><script src="/app.js"></script></body></html>

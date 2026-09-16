@@ -1,0 +1,20 @@
+{
+  "RAD-101": {
+    "cleared": true,
+    "attempts": 7,
+    "lastMessage": "CLEARED",
+    "checkedAt": "2026-09-09T13:51:54.280Z"
+  },
+  "RAD-102": {
+    "cleared": true,
+    "attempts": 85,
+    "lastMessage": "CLEARED",
+    "checkedAt": "2026-09-09T14:25:48.321Z"
+  },
+  "RAD-104": {
+    "cleared": true,
+    "attempts": 16,
+    "lastMessage": "CLEARED",
+    "checkedAt": "2026-09-09T14:45:36.918Z"
+  }
+}

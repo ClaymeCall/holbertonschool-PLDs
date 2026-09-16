@@ -1,0 +1,758 @@
+[
+  {
+    "type": "CHECK",
+    "id": "RAD-101",
+    "ok": false,
+    "message": "5 documents representent seulement 2 evenements\n\n5 !== 2\n",
+    "at": "2026-09-09T13:44:24.751Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-101",
+    "ok": false,
+    "message": "5 documents representent seulement 2 evenements\n\n5 !== 2\n",
+    "at": "2026-09-09T13:44:28.667Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-101",
+    "ok": false,
+    "message": "5 documents representent seulement 2 evenements\n\n5 !== 2\n",
+    "at": "2026-09-09T13:44:43.791Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-101",
+    "ok": false,
+    "message": "5 documents representent seulement 2 evenements\n\n5 !== 2\n",
+    "at": "2026-09-09T13:44:47.619Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-101",
+    "ok": false,
+    "message": "5 documents representent seulement 2 evenements\n\n5 !== 2\n",
+    "at": "2026-09-09T13:44:53.142Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-101",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T13:51:50.994Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-101",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T13:51:54.281Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T13:51:56.978Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T13:52:19.831Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T13:52:22.943Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T13:52:27.384Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T13:52:30.743Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T13:55:03.726Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T13:55:42.336Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T13:55:46.064Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T13:55:49.263Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "at": "2026-09-09T13:58:35.025Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "at": "2026-09-09T13:58:38.985Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "at": "2026-09-09T13:58:50.107Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "at": "2026-09-09T13:58:52.284Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "at": "2026-09-09T13:58:53.229Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "at": "2026-09-09T13:58:55.588Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "at": "2026-09-09T13:58:59.854Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "at": "2026-09-09T13:59:09.024Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "at": "2026-09-09T13:59:09.965Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "at": "2026-09-09T13:59:10.304Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "at": "2026-09-09T13:59:10.584Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "at": "2026-09-09T13:59:10.836Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "at": "2026-09-09T13:59:33.409Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "at": "2026-09-09T13:59:36.890Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:00:34.679Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:00:37.707Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:00:40.818Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:01:14.161Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:01:15.685Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:01:15.849Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:01:15.999Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:01:16.151Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:01:16.302Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:01:17.323Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:01:33.510Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:01:35.290Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:01:35.465Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:01:35.650Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:01:35.791Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:02:36.477Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\nfalse !== true\n",
+    "at": "2026-09-09T14:04:06.836Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:04:36.536Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:04:37.722Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:04:58.329Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:06:32.969Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:06:39.380Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:07:11.737Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:07:13.098Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:08:40.100Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:08:50.151Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:08:55.696Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:09:30.098Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:09:33.429Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:10:43.349Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:10:51.113Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:10:51.999Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:10:54.281Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:10:55.236Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:11:24.391Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:11:41.804Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:11:59.535Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:12:09.058Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:12:13.131Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:15:01.986Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:16:01.477Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:16:02.576Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:16:05.170Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:16:13.140Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:16:18.594Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:17:39.727Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:18:26.786Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:18:47.294Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:19:35.233Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:19:37.850Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:20:09.802Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:20:11.772Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:20:54.435Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:21:00.350Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:21:33.974Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:22:12.051Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:23:11.924Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:23:34.382Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": false,
+    "message": "une mise a jour ne transforme pas un vieil article en nouvelle publication\n\ntrue !== false\n",
+    "at": "2026-09-09T14:24:57.328Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:25:11.997Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:25:14.650Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-102",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:25:48.323Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32mactual\u001b[39m \u001b[31mexpected\u001b[39m\n\n\u001b[39m'\u001b[39m\u001b[32mc\u001b[39m\u001b[39mo\u001b[39m\u001b[32mm\u001b[39m\u001b[32mm\u001b[39m\u001b[32mu\u001b[39m\u001b[32mn\u001b[39m\u001b[31mf\u001b[39m\u001b[31mf\u001b[39m\u001b[39mi\u001b[39m\u001b[32mt\u001b[39m\u001b[32my\u001b[39m\u001b[31mc\u001b[39m\u001b[31mi\u001b[39m\u001b[31ma\u001b[39m\u001b[31ml\u001b[39m\u001b[39m'\u001b[39m\n",
+    "at": "2026-09-09T14:27:24.201Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m\n\n\u001b[32m+\u001b[39m undefined\n\u001b[31m- \u001b[39m'official'\n",
+    "at": "2026-09-09T14:35:56.984Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m\n\n\u001b[32m+\u001b[39m undefined\n\u001b[31m- \u001b[39m'official'\n",
+    "at": "2026-09-09T14:36:00.533Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m\n\n\u001b[32m+\u001b[39m undefined\n\u001b[31m- \u001b[39m'official'\n",
+    "at": "2026-09-09T14:36:04.213Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32m+ actual\u001b[39m \u001b[31m- expected\u001b[39m\n\n\u001b[32m+\u001b[39m undefined\n\u001b[31m- \u001b[39m'official'\n",
+    "at": "2026-09-09T14:36:07.480Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "b is not defined",
+    "at": "2026-09-09T14:37:10.013Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "b is not defined",
+    "at": "2026-09-09T14:37:16.454Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32mactual\u001b[39m \u001b[31mexpected\u001b[39m\n\n\u001b[39m'\u001b[39m\u001b[32mc\u001b[39m\u001b[39mo\u001b[39m\u001b[32mm\u001b[39m\u001b[32mm\u001b[39m\u001b[32mu\u001b[39m\u001b[32mn\u001b[39m\u001b[31mf\u001b[39m\u001b[31mf\u001b[39m\u001b[39mi\u001b[39m\u001b[32mt\u001b[39m\u001b[32my\u001b[39m\u001b[31mc\u001b[39m\u001b[31mi\u001b[39m\u001b[31ma\u001b[39m\u001b[31ml\u001b[39m\u001b[39m'\u001b[39m\n",
+    "at": "2026-09-09T14:37:36.945Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32mactual\u001b[39m \u001b[31mexpected\u001b[39m\n\n\u001b[39m'\u001b[39m\u001b[32mc\u001b[39m\u001b[39mo\u001b[39m\u001b[32mm\u001b[39m\u001b[32mm\u001b[39m\u001b[32mu\u001b[39m\u001b[32mn\u001b[39m\u001b[31mf\u001b[39m\u001b[31mf\u001b[39m\u001b[39mi\u001b[39m\u001b[32mt\u001b[39m\u001b[32my\u001b[39m\u001b[31mc\u001b[39m\u001b[31mi\u001b[39m\u001b[31ma\u001b[39m\u001b[31ml\u001b[39m\u001b[39m'\u001b[39m\n",
+    "at": "2026-09-09T14:37:45.179Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32mactual\u001b[39m \u001b[31mexpected\u001b[39m\n\n\u001b[39m'\u001b[39m\u001b[32mc\u001b[39m\u001b[39mo\u001b[39m\u001b[32mm\u001b[39m\u001b[32mm\u001b[39m\u001b[32mu\u001b[39m\u001b[32mn\u001b[39m\u001b[31mf\u001b[39m\u001b[31mf\u001b[39m\u001b[39mi\u001b[39m\u001b[32mt\u001b[39m\u001b[32my\u001b[39m\u001b[31mc\u001b[39m\u001b[31mi\u001b[39m\u001b[31ma\u001b[39m\u001b[31ml\u001b[39m\u001b[39m'\u001b[39m\n",
+    "at": "2026-09-09T14:37:48.793Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32mactual\u001b[39m \u001b[31mexpected\u001b[39m\n\n\u001b[39m'\u001b[39m\u001b[32mc\u001b[39m\u001b[39mo\u001b[39m\u001b[32mm\u001b[39m\u001b[32mm\u001b[39m\u001b[32mu\u001b[39m\u001b[32mn\u001b[39m\u001b[31mf\u001b[39m\u001b[31mf\u001b[39m\u001b[39mi\u001b[39m\u001b[32mt\u001b[39m\u001b[32my\u001b[39m\u001b[31mc\u001b[39m\u001b[31mi\u001b[39m\u001b[31ma\u001b[39m\u001b[31ml\u001b[39m\u001b[39m'\u001b[39m\n",
+    "at": "2026-09-09T14:37:52.760Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32mactual\u001b[39m \u001b[31mexpected\u001b[39m\n\n\u001b[39m'\u001b[39m\u001b[32mc\u001b[39m\u001b[39mo\u001b[39m\u001b[32mm\u001b[39m\u001b[32mm\u001b[39m\u001b[32mu\u001b[39m\u001b[32mn\u001b[39m\u001b[31mf\u001b[39m\u001b[31mf\u001b[39m\u001b[39mi\u001b[39m\u001b[32mt\u001b[39m\u001b[32my\u001b[39m\u001b[31mc\u001b[39m\u001b[31mi\u001b[39m\u001b[31ma\u001b[39m\u001b[31ml\u001b[39m\u001b[39m'\u001b[39m\n",
+    "at": "2026-09-09T14:37:56.090Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32mactual\u001b[39m \u001b[31mexpected\u001b[39m\n\n\u001b[39m'\u001b[39m\u001b[32mc\u001b[39m\u001b[39mo\u001b[39m\u001b[32mm\u001b[39m\u001b[32mm\u001b[39m\u001b[32mu\u001b[39m\u001b[32mn\u001b[39m\u001b[31mf\u001b[39m\u001b[31mf\u001b[39m\u001b[39mi\u001b[39m\u001b[32mt\u001b[39m\u001b[32my\u001b[39m\u001b[31mc\u001b[39m\u001b[31mi\u001b[39m\u001b[31ma\u001b[39m\u001b[31ml\u001b[39m\u001b[39m'\u001b[39m\n",
+    "at": "2026-09-09T14:37:58.778Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32mactual\u001b[39m \u001b[31mexpected\u001b[39m\n\n\u001b[39m'\u001b[39m\u001b[32mc\u001b[39m\u001b[39mo\u001b[39m\u001b[32mm\u001b[39m\u001b[32mm\u001b[39m\u001b[32mu\u001b[39m\u001b[32mn\u001b[39m\u001b[31mf\u001b[39m\u001b[31mf\u001b[39m\u001b[39mi\u001b[39m\u001b[32mt\u001b[39m\u001b[32my\u001b[39m\u001b[31mc\u001b[39m\u001b[31mi\u001b[39m\u001b[31ma\u001b[39m\u001b[31ml\u001b[39m\u001b[39m'\u001b[39m\n",
+    "at": "2026-09-09T14:38:02.264Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": false,
+    "message": "Expected values to be strictly equal:\n\u001b[32mactual\u001b[39m \u001b[31mexpected\u001b[39m\n\n\u001b[39m'\u001b[39m\u001b[32mc\u001b[39m\u001b[39mo\u001b[39m\u001b[32mm\u001b[39m\u001b[32mm\u001b[39m\u001b[32mu\u001b[39m\u001b[32mn\u001b[39m\u001b[31mf\u001b[39m\u001b[31mf\u001b[39m\u001b[39mi\u001b[39m\u001b[32mt\u001b[39m\u001b[32my\u001b[39m\u001b[31mc\u001b[39m\u001b[31mi\u001b[39m\u001b[31ma\u001b[39m\u001b[31ml\u001b[39m\u001b[39m'\u001b[39m\n",
+    "at": "2026-09-09T14:42:40.911Z"
+  },
+  {
+    "type": "CHECK",
+    "id": "RAD-104",
+    "ok": true,
+    "message": "CLEARED",
+    "at": "2026-09-09T14:45:36.920Z"
+  }
+]

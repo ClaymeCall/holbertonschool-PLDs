@@ -1,0 +1,10 @@
+import { checkAgent, checkPipelineFoundation, foundationResults } from './foundation.js';
+const target=process.argv[2] || 'all';
+let results;
+if (target==='scout' || target==='analyst' || target==='editor') results=[checkAgent(target)];
+else if (target==='pipeline') results=[checkPipelineFoundation()];
+else results=foundationResults();
+for (const r of results) console.log(`${r.ok?'[PASS]':'[FAIL]'} ${r.role.toUpperCase()} - ${r.message}`);
+const ok=results.filter(x=>x.ok).length;
+if (target==='all') console.log(`\nFOUNDATION ${ok}/${results.length} ${ok===results.length?'READY':'NOT READY'}`);
+if (ok!==results.length) process.exitCode=1;

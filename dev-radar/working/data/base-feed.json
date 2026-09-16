@@ -1,0 +1,49 @@
+[
+  {
+    "id": "B1",
+    "eventId": "node-26.1.0",
+    "project": "Node.js",
+    "title": "Node.js 26.1.0 released",
+    "body": "Maintenance release with runtime fixes.",
+    "url": "https://example.local/node/26.1.0",
+    "sourceName": "Node.js Releases",
+    "authority": "official",
+    "publishedAt": "2026-09-07T10:00:00Z",
+    "updatedAt": "2026-09-07T10:00:00Z",
+    "version": "26.1.0",
+    "origin": "external",
+    "confidence": 0.98,
+    "category": "release"
+  },
+  {
+    "id": "B2",
+    "eventId": "gha-sec-2026-09",
+    "project": "GitHub Actions",
+    "title": "GitHub Actions hardens artifact attestations",
+    "body": "Security hardening for artifact attestations and verification.",
+    "url": "https://example.local/github/actions-attestations",
+    "sourceName": "GitHub Changelog",
+    "authority": "official",
+    "publishedAt": "2026-09-08T07:30:00Z",
+    "updatedAt": "2026-09-08T07:30:00Z",
+    "origin": "external",
+    "confidence": 0.99,
+    "category": "security"
+  },
+  {
+    "id": "B3",
+    "eventId": "react-labs-sep",
+    "project": "React",
+    "title": "React Labs update",
+    "body": "Experimental work and prerelease discussion.",
+    "url": "https://example.local/react/labs",
+    "sourceName": "React Blog",
+    "authority": "official",
+    "publishedAt": "2026-09-06T09:00:00Z",
+    "updatedAt": "2026-09-06T09:00:00Z",
+    "version": "20.0.0-beta.3",
+    "origin": "external",
+    "confidence": 0.94,
+    "category": "release"
+  }
+]

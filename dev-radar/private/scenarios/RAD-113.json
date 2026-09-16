@@ -1,0 +1,6 @@
+{
+  "id": "RAD-113",
+  "title": "Context Copy Tax",
+  "topic": "Budget de contexte",
+  "symptom": "Chaque agent charge tout le contexte et duplique inutilement le compute."
+}

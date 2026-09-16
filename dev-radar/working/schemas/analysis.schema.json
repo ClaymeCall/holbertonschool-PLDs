@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AnalysisItem",
+  "type": "object",
+  "required": [
+    "id",
+    "priority",
+    "reason",
+    "confidence",
+    "verified",
+    "facts",
+    "sources"
+  ],
+  "properties": {
+    "priority": {
+      "enum": [
+        "P0",
+        "P1",
+        "P2",
+        "IGNORE"
+      ]
+    },
+    "confidence": {
+      "type": "number"
+    },
+    "verified": {
+      "type": "boolean"
+    },
+    "sources": {
+      "type": "array"
+    }
+  }
+}

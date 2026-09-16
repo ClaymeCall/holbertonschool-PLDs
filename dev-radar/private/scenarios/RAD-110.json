@@ -1,0 +1,6 @@
+{
+  "id": "RAD-110",
+  "title": "Self-Citation Loop",
+  "topic": "Lineage",
+  "symptom": "DEV RADAR finit par utiliser ses propres briefs comme preuves externes."
+}

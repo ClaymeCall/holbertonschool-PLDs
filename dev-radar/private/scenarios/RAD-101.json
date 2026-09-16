@@ -1,0 +1,6 @@
+{
+  "id": "RAD-101",
+  "title": "Echo Chamber",
+  "topic": "Deduplication semantique",
+  "symptom": "Le brief publie plusieurs formulations du meme evenement."
+}
