@@ -1,0 +1,212 @@
+[
+  {
+    "ts": "2026-09-02T12:49:23.431Z",
+    "type": "FAILED",
+    "id": "FC-101",
+    "message": "FC-101 · checker échoué — Un chevauchement sur la même scène doit être refusé.\n\nfalse !== true\n"
+  },
+  {
+    "ts": "2026-09-02T13:05:45.293Z",
+    "type": "FAILED",
+    "id": "FC-101",
+    "message": "FC-101 · checker échoué — Un chevauchement sur la même scène doit être refusé.\n\nfalse !== true\n"
+  },
+  {
+    "ts": "2026-09-02T13:09:47.195Z",
+    "type": "CLEARED",
+    "id": "FC-105",
+    "message": "FC-105 · Scène morte — INCIDENT CLEARED (+100 XP)"
+  },
+  {
+    "ts": "2026-09-02T13:22:44.200Z",
+    "type": "CLEARED",
+    "id": "FC-101",
+    "message": "FC-101 · Collision de scène — INCIDENT CLEARED (+100 XP)"
+  },
+  {
+    "ts": "2026-09-02T13:29:19.136Z",
+    "type": "FAILED",
+    "id": "FC-102",
+    "message": "FC-102 · checker échoué — Un artiste ne peut jouer sur deux scènes en même temps.\n\nfalse !== true\n"
+  },
+  {
+    "ts": "2026-09-02T13:30:37.590Z",
+    "type": "CLEARED",
+    "id": "FC-102",
+    "message": "FC-102 · Artiste ubiquitaire — INCIDENT CLEARED (+100 XP)"
+  },
+  {
+    "ts": "2026-09-02T13:30:37.591Z",
+    "type": "UNLOCK",
+    "id": "FC-102",
+    "message": "ACTE 2 DÉVERROUILLÉ — LES PORTES S’ENTROUVRENT"
+  },
+  {
+    "ts": "2026-09-02T13:32:41.434Z",
+    "type": "FAILED",
+    "id": "FC-103",
+    "message": "FC-103 · checker échoué — Un billet annulé doit invalider son bracelet.\n\nfalse !== true\n"
+  },
+  {
+    "ts": "2026-09-02T13:35:44.672Z",
+    "type": "FAILED",
+    "id": "FC-103",
+    "message": "FC-103 · checker échoué — Expected values to be strictly deep-equal:\n\u001b[32mactual\u001b[39m \u001b[31mexpected\u001b[39m\n\n\u001b[39m'\u001b[39m\u001b[39mT\u001b[39m\u001b[39mI\u001b[39m\u001b[39mC\u001b[39m\u001b[39mK\u001b[39m\u001b[39mE\u001b[39m\u001b[39mT\u001b[39m\u001b[39m_\u001b[39m\u001b[31mI\u001b[39m\u001b[39mN\u001b[39m\u001b[32mO\u001b[39m\u001b[32mT\u001b[39m\u001b[32m_\u001b[39m\u001b[39mA\u001b[39m\u001b[39mC\u001b[39m\u001b[39mT\u001b[39m\u001b[39mI\u001b[39m\u001b[39mV\u001b[39m\u001b[39mE\u001b[39m\u001b[39m'\u001b[39m\n"
+  },
+  {
+    "ts": "2026-09-02T13:36:14.554Z",
+    "type": "FAILED",
+    "id": "FC-103",
+    "message": "FC-103 · checker échoué — Un vrai billet VIP actif doit rester valide.\n\nfalse !== true\n"
+  },
+  {
+    "ts": "2026-09-02T13:36:43.897Z",
+    "type": "FAILED",
+    "id": "FC-103",
+    "message": "FC-103 · checker échoué — Un vrai billet VIP actif doit rester valide.\n\nfalse !== true\n"
+  },
+  {
+    "ts": "2026-09-02T13:37:27.734Z",
+    "type": "CLEARED",
+    "id": "FC-103",
+    "message": "FC-103 · Bracelet fantôme — INCIDENT CLEARED (+100 XP)"
+  },
+  {
+    "ts": "2026-09-02T13:38:26.192Z",
+    "type": "CLEARED",
+    "id": "FC-103",
+    "message": "FC-103 · Bracelet fantôme — INCIDENT CLEARED (+100 XP)"
+  },
+  {
+    "ts": "2026-09-02T13:39:17.148Z",
+    "type": "FAILED",
+    "id": "FC-104",
+    "message": "FC-104 · checker échoué — VIP ne signifie pas backstage.\n\nfalse !== true\n"
+  },
+  {
+    "ts": "2026-09-02T13:51:13.706Z",
+    "type": "FAILED",
+    "id": "FC-104",
+    "message": "FC-104 · checker échoué — VIP ne signifie pas backstage.\n\nfalse !== true\n"
+  },
+  {
+    "ts": "2026-09-02T13:54:48.025Z",
+    "type": "CLEARED",
+    "id": "FC-104",
+    "message": "FC-104 · Backstage breach — INCIDENT CLEARED (+100 XP)"
+  },
+  {
+    "ts": "2026-09-02T13:54:48.026Z",
+    "type": "UNLOCK",
+    "id": "FC-104",
+    "message": "ACTE 3 DÉVERROUILLÉ — LA FOULE MONTE"
+  },
+  {
+    "ts": "2026-09-02T14:15:42.704Z",
+    "type": "FAILED",
+    "id": "FC-106",
+    "message": "FC-106 · checker échoué — Une zone à capacité exacte est déjà pleine.\n\nfalse !== true\n"
+  },
+  {
+    "ts": "2026-09-02T14:16:12.773Z",
+    "type": "CLEARED",
+    "id": "FC-106",
+    "message": "FC-106 · Une personne de trop — INCIDENT CLEARED (+100 XP)"
+  },
+  {
+    "ts": "2026-09-02T14:16:12.774Z",
+    "type": "UNLOCK",
+    "id": "FC-106",
+    "message": "ACTE 4 DÉVERROUILLÉ — LE SYSTÈME MENT"
+  },
+  {
+    "ts": "2026-09-02T14:20:34.917Z",
+    "type": "FAILED",
+    "id": "FC-107",
+    "message": "FC-107 · checker échoué — Un niveau inconnu doit être rejeté.\n\nfalse !== true\n"
+  },
+  {
+    "ts": "2026-09-02T14:43:02.286Z",
+    "type": "CLEARED",
+    "id": "FC-107",
+    "message": "FC-107 · Payload sauvage — INCIDENT CLEARED (+100 XP)"
+  },
+  {
+    "ts": "2026-09-02T14:48:54.064Z",
+    "type": "FAILED",
+    "id": "FC-108",
+    "message": "FC-108 · checker échoué — Une création réussie répond 201.\n\n200 !== 201\n"
+  },
+  {
+    "ts": "2026-09-02T14:50:21.999Z",
+    "type": "FAILED",
+    "id": "FC-108",
+    "message": "FC-108 · checker échoué — Une création réussie répond 201.\n\n200 !== 201\n"
+  },
+  {
+    "ts": "2026-09-02T14:50:34.050Z",
+    "type": "FAILED",
+    "id": "FC-108",
+    "message": "FC-108 · checker échoué — Une création réussie répond 201.\n\n200 !== 201\n"
+  },
+  {
+    "ts": "2026-09-02T14:51:47.571Z",
+    "type": "FAILED",
+    "id": "FC-108",
+    "message": "FC-108 · checker échoué — Une création réussie répond 201.\n\n200 !== 201\n"
+  },
+  {
+    "ts": "2026-09-02T14:53:06.257Z",
+    "type": "FAILED",
+    "id": "FC-108",
+    "message": "FC-108 · checker échoué — Un payload invalide répond 400.\n\n409 !== 400\n"
+  },
+  {
+    "ts": "2026-09-02T14:53:45.166Z",
+    "type": "FAILED",
+    "id": "FC-108",
+    "message": "FC-108 · checker échoué — Un conflit métier répond 409.\n\n500 !== 409\n"
+  },
+  {
+    "ts": "2026-09-02T14:53:58.629Z",
+    "type": "FAILED",
+    "id": "FC-108",
+    "message": "FC-108 · checker échoué — Un payload invalide répond 400.\n\n409 !== 400\n"
+  },
+  {
+    "ts": "2026-09-02T14:57:35.221Z",
+    "type": "FAILED",
+    "id": "FC-108",
+    "message": "FC-108 · checker échoué — Une création réussie répond 201.\n\n200 !== 201\n"
+  },
+  {
+    "ts": "2026-09-02T14:57:47.193Z",
+    "type": "FAILED",
+    "id": "FC-108",
+    "message": "FC-108 · checker échoué — Un conflit métier répond 409.\n\n500 !== 409\n"
+  },
+  {
+    "ts": "2026-09-02T14:58:04.317Z",
+    "type": "FAILED",
+    "id": "FC-108",
+    "message": "FC-108 · checker échoué — Un payload invalide répond 400.\n\n409 !== 400\n"
+  },
+  {
+    "ts": "2026-09-02T15:19:19.034Z",
+    "type": "CLEARED",
+    "id": "FC-108",
+    "message": "FC-108 · Mauvais signal HTTP — INCIDENT CLEARED (+100 XP)"
+  },
+  {
+    "ts": "2026-09-02T15:19:19.035Z",
+    "type": "UNLOCK",
+    "id": "FC-108",
+    "message": "GATES CLEARED — MODE ENCORE DÉVERROUILLÉ"
+  },
+  {
+    "ts": "2026-09-02T15:21:59.994Z",
+    "type": "CLEARED",
+    "id": "FC-108",
+    "message": "FC-108 · Mauvais signal HTTP — INCIDENT CLEARED (+100 XP)"
+  }
+]
