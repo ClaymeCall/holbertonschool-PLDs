@@ -1,0 +1,19 @@
+{
+  "name": "patch-zero-liveops-pld",
+  "version": "2.3.0",
+  "private": true,
+  "description": "PATCH//ZERO - Centre LiveOps Agentic immersif",
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js",
+    "doctor": "node private/doctor.js",
+    "check": "node private/cli.js check",
+    "evidence": "node private/cli.js evidence",
+    "certify": "node private/cli.js certify",
+    "reset": "node private/reset.js",
+    "test": "node --test working/tests/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

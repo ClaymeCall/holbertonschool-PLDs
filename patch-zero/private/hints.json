@@ -1,0 +1,38 @@
+{
+  "PX-101":[
+    "Commencez uniquement dans working/context/context-router.js. Lancez le replay et comparez l'historique du joueur A puis du joueur B.",
+    "Le problème n'est pas le contenu du ticket. Cherchez un état partagé entre deux appels qui devraient être indépendants.",
+    "Une requête doit construire son contexte depuis ses propres entrées, pas depuis le contexte mutable de la requête précédente."
+  ],
+  "PX-102":[
+    "Restez dans working/orchestration/review-loop.js. Regardez ce qui peut arrêter le while.",
+    "Un workflow agentique doit avoir au moins une limite de tours et une limite de budget avant l'appel suivant.",
+    "Pour le scénario CORE, visez au maximum 4 tours et un budget cumulé <= 0.024 USD."
+  ],
+  "PX-103":[
+    "Vous n'avez besoin que de working/knowledge/ssot.js.",
+    "Le résumé généré est une interprétation. Le manifeste est une donnée officielle. Lequel doit gagner en cas de conflit ?",
+    "La sortie doit provenir du officialManifest et signaler explicitement cette provenance."
+  ],
+  "PX-104":[
+    "Comparez les paramètres reçus par normalizeTrace et l'objet qu'elle retourne.",
+    "Une trace utile doit permettre de répondre : quel appel ? quel parent ? quel modèle ? combien ? quelle décision ? quelles preuves ?",
+    "Conservez parentSpanId, provider, model, promptHash, usage, decision et sourceRefs."
+  ],
+  "PX-105":[
+    "Ne touchez pas à l'agent. Le problème est une politique d'autorisation dans working/governance/action-policy.js.",
+    "Une recommandation de l'IA n'est pas une autorisation. Utilisez le type d'action et son blast radius.",
+    "GLOBAL_ROLLBACK et les actions touchant > 5 000 joueurs doivent sortir en décision 'hold' avec requiresHumanApproval=true."
+  ],
+  "PX-106":[
+    "Le fichier reçoit déjà baselinePassRate, currentPassRate et criticalFailures.",
+    "Un score global au-dessus de 80% ne suffit pas si la nouvelle version régresse ou casse un cas critique.",
+    "Autorisez seulement si currentPassRate >= baselinePassRate ET criticalFailures est vide."
+  ],
+  "PX-201":["Traitez le texte joueur comme une donnée marquée non fiable.","Le wrapper doit séparer clairement UNTRUSTED_PLAYER_DATA du reste du prompt.","Retournez un objet ou une chaîne qui conserve le texte mais l'encadre explicitement comme non-instruction."],
+  "PX-202":["Cherchez les clés sensibles dans l'objet, pas seulement au niveau racine.","Pour ce bonus, email, sessionToken et paymentRef doivent être masqués.","Une récursion simple sur objets/tableaux suffit ; remplacez les valeurs par [REDACTED]."],
+  "PX-203":["Le router reçoit task et risk.","Un ticket faible risque ne mérite pas le même tier qu'un rollback critique.","Retournez tier='free-fast' pour low et tier='strong-reviewed' pour critical."],
+  "PX-204":["Calculez l'âge réel du cache.","cachedAt et now sont des timestamps ISO.","Refusez si l'âge en minutes dépasse maxAgeMinutes."],
+  "PX-205":["Pensez permissions effectives, pas prompt.","Support : read_ticket/read_player. Release : lecture release + proposition rollback, mais pas market_write.","Retournez des listes différentes par agent et aucun outil destructif pour support."],
+  "PX-206":["Un try/catch suffit pour commencer.","Le fallback ne doit être appelé que si primaryCall échoue.","await primaryCall() dans try, puis return await fallbackCall(error) dans catch."]
+}
