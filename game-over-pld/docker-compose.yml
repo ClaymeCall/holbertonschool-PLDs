@@ -4,7 +4,7 @@ services:
   inventory:
     image: node:22-alpine
     working_dir: /app
-    command: ["node", "private/inventory/server.mjs"]
+    command: ["node", "--watch", "--watch-preserve-output", "private/inventory/server.mjs"]
     volumes:
       - ./private:/app/private:ro
       - ./work:/app/work:ro
@@ -19,7 +19,7 @@ services:
   api:
     image: node:22-alpine
     working_dir: /app
-    command: ["node", "private/api/server.mjs"]
+    command: ["node", "--watch", "--watch-preserve-output", "private/api/server.mjs"]
     volumes:
       - ./private:/app/private:ro
       - ./work:/app/work:ro
