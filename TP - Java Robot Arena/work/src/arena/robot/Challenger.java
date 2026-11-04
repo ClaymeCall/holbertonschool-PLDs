@@ -17,17 +17,35 @@ package arena.robot;
  *
  * Remplacez cette coquille par votre conception.
  */
-public class Challenger extends Robot {
-    // TODO Mission 6 : SpecialAbility (champ interne) + stats dans le budget
+public class Challenger extends Robot implements SpecialAbility {
+  private static final int SPECIAL_COST = 10;
+  private static final String SPECIAL_NAME = "Double sabre";
 
-    public Challenger(String id, String name) {
-        // TODO Mission 6 : choisissez vos stats dans le budget
-        super(id, name, 100, 20, 100);
-    }
+  public Challenger(String id, String name) {
+    // Budget : 130 + 30*3 + 120/2 = 280
+    super(id, name, 130, 30, 120);
+  }
 
-    @Override
-    public SpecialResult useSpecial(Robot target) {
-        // TODO Mission 6 : délègue à ta SpecialAbility
-        return new SpecialResult("Non homologué", 0, 0, 0);
-    }
+  @Override
+  public String abilityName() {
+    return SPECIAL_NAME;
+  }
+
+  @Override
+  public int energyCost() {
+    return SPECIAL_COST;
+  }
+
+  @Override
+  public SpecialResult execute(Robot self, Robot target) {
+    int specialDamage = self.getAttackPower() * 2;
+    target.takeDamage(specialDamage);
+    self.spendEnergy(SPECIAL_COST);
+    return new SpecialResult(SPECIAL_NAME, specialDamage, 0, SPECIAL_COST);
+  }
+
+  @Override
+  public SpecialResult useSpecial(Robot target) {
+    return execute(this, target);
+  }
 }
