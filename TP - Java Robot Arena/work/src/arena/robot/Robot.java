@@ -27,8 +27,6 @@ public abstract class Robot {
         // BUG Mission 1 : this manquant / initialisation incomplète
         this.id = id;
         this.name = name;
-        this.id = id;
-        this.name = name;
         this.maxHealth = maxHealth;
         this.attackPower = attackPower;
         this.health = maxHealth;
