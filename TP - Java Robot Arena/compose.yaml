@@ -1,0 +1,23 @@
+services:
+  robot-arena:
+    build:
+      context: .
+      dockerfile: private/platform/Dockerfile
+    container_name: robot-arena
+    ports:
+      # Atelier local : bind localhost (pas d'exposition LAN)
+      - "127.0.0.1:8080:8080"
+    volumes:
+      # Atelier étudiant (lecture / écriture)
+      - ./work:/arena/work
+      # Ressources pédagogiques privées (lecture seule)
+      - ./private/missions:/arena/private/missions:ro
+      - ./private/engine:/arena/private/engine:ro
+      - ./private/tests:/arena/private/tests:ro
+      # private/formateur : hors pack étudiant (corrigé réservé formateur)
+    environment:
+      - ARENA_WORK=/arena/work
+      - ARENA_PRIVATE=/arena/private
+      - CLIENT_DIST=/opt/platform/client/dist
+      - PORT=8080
+    restart: unless-stopped

@@ -1,0 +1,21 @@
+# Dépendances & builds locaux (l'image Docker les reconstruit)
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+*.class
+*.jar
+*.war
+*.log
+.DS_Store
+.idea/
+*.iml
+.vscode/
+.cursor/
+*.swp
+*~
+
+# Artefacts de compilation étudiant
+/tmp/
+work/**/out/
+work/**/build/

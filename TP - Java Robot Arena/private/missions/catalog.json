@@ -1,0 +1,334 @@
+{
+  "season": "2147",
+  "facility": "Aegis Combat Complex · Bay 07",
+  "missions": [
+    {
+      "id": "m0",
+      "order": 0,
+      "code": "OPS-0",
+      "title": "Prendre son poste",
+      "severity": "low",
+      "statusLabel": "Briefing",
+      "contexte": "Tu viens d'arriver au centre technique. Avant de réparer quoi que ce soit, tu dois comprendre l'organisation du projet (work/ vs private/) et vérifier que ton environnement compile.",
+      "symptomes": [
+        "Aucun bug de code à corriger ici",
+        "Objectif : s'orienter et lancer un premier diagnostic vert"
+      ],
+      "objectif": "S'approprier le poste de technicien : comprendre la séparation work/ (ton code) et private/ (interdit), repérer les classes centrales du moteur de combat, puis prouver que l'environnement est sain en faisant passer le test m0. Tu ne corriges aucun bug métier ici : tu valides que tu peux compiler, tester et naviguer dans le projet.",
+      "signalement": "Nouvelle saison. Le centre technique ouvre en mode diagnostic. Avant toute réparation, l'équipe doit comprendre le plan de l'atelier et lancer un premier contrôle.",
+      "reproduire": "1) Ouvre work/docs/PLAN_PROJET.md. 2) Dans la plateforme : Centre de contrôle → Compiler et tester. 3) Parcours un robot dans l'Atelier.",
+      "attendu": [
+        "La plateforme répond sur http://localhost:8080",
+        "Le diagnostic m0 passe (classes présentes, équipe instanciable)",
+        "Tu sais où sont Robot.java, Team.java et CombatEngine.java"
+      ],
+      "files": [
+        {
+          "path": "work/docs/PLAN_PROJET.md",
+          "role": "Carte du projet"
+        },
+        {
+          "path": "work/src/arena/robot/Robot.java",
+          "role": "Classe de base à inspecter"
+        }
+      ],
+      "constraints": [
+        "Ne pas modifier private/",
+        "Ne pas renommer les packages arena.*"
+      ],
+      "validation": "Mission m0 · statut passed",
+      "hints": [
+        "Le README à la racine rappelle la séparation work/ (vous) et private/ (interdit).",
+        "Dans la plateforme, l'onglet Documentation reprend le plan et les commandes.",
+        "Le bouton Compiler et tester lance ValidationRunner sur votre code monté dans le conteneur."
+      ],
+      "notions": [
+        "Organisation de projet",
+        "Lecture de code"
+      ]
+    },
+    {
+      "id": "m1",
+      "order": 1,
+      "code": "INC-2147-01",
+      "title": "Réinitialisation impossible",
+      "severity": "high",
+      "statusLabel": "Bloquant homologation",
+      "contexte": "L'homologation des robots échoue dès le banc d'énergie. Deux tanks distincts partagent anormalement la même jauge, et l'identité (id / nom) n'est pas enregistrée au constructeur.",
+      "symptomes": [
+        "Bug A (énergie partagée) : Atlas attaque (-20 EN) → Nova perd aussi 20 EN alors qu'elle n'a rien fait",
+        "Bug B (constructeur) : getId() / getName() renvoient null (affectation id = id sans this)",
+        "Bug C (equals) : deux robots au même nom ne sont pas reconnus égaux (comparaison avec ==)"
+      ],
+      "objectif": "Rendre chaque robot indépendant et correctement initialisé. Aujourd'hui l'énergie est partagée entre tous (static), le constructeur n'enregistre pas id/name (oubli de this), et equals compare mal les noms. Ton objectif : dans Robot.java, corriger ces trois points pour que le diagnostic énergie et les tests m1 passent. Atlas consomme 20 EN, Nova reste intacte, et l'identité du robot est fiable.",
+      "signalement": "Après une attaque d'Atlas, l'énergie de Nova baisse aussi. Les robots sortent du constructeur avec id/name nuls. La reconnaissance par nom (equals) échoue.",
+      "reproduire": "Arène → scénario « Diagnostic énergie » → Lancer → lire le journal (Atlas 100→80 et Nova aussi). Ou : Valider la mission m1 / tests m1.",
+      "attendu": [
+        "Chaque robot a sa propre énergie (pas static)",
+        "Atlas 100 → 80 après attaque ; Nova reste à 100",
+        "getId()/getName() renvoient les valeurs passées au constructeur",
+        "equals compare les noms avec .equals(...) (pas ==)"
+      ],
+      "files": [
+        {
+          "path": "work/src/arena/robot/Robot.java",
+          "role": "Champ energy, constructeur, equals"
+        }
+      ],
+      "constraints": [
+        "Conserver la signature du constructeur Robot(...)",
+        "Ne pas supprimer les getters existants"
+      ],
+      "validation": "Mission m1 passed",
+      "hints": [
+        "Regarde ce qui appartient à chaque robot et ce qui est partagé entre tous les robots.",
+        "Observe le modificateur du champ energy dans Robot.java, et les affectations id = id; name = name; dans le constructeur.",
+        "Un champ static appartient à la classe. L'énergie doit être un champ d'instance initialisé via this. Pour equals, utilise name.equals(...) (avec garde null)."
+      ],
+      "notions": [
+        "equals",
+        "this",
+        "static",
+        "champs d'instance"
+      ]
+    },
+    {
+      "id": "m2",
+      "order": 2,
+      "code": "INC-2147-02",
+      "title": "Robots hors limites",
+      "severity": "high",
+      "statusLabel": "Sécurité combat",
+      "contexte": "Le moteur de combat ne protège pas les invariants de vie. Des valeurs absurdes passent et cassent la simulation (PV négatifs, résurrections, etc.).",
+      "symptomes": [
+        "takeDamage(-30) augmente les PV (les dégâts négatifs soignent)",
+        "takeDamage(9999) laisse health < 0 au lieu de 0 + destroyed",
+        "repair() sur un robot détruit le « ressuscite » et peut dépasser maxHealth"
+      ],
+      "objectif": "Protéger les invariants de vie du robot. Les méthodes takeDamage et repair acceptent encore des cas absurdes (soin via dégâts négatifs, PV sous zéro, résurrection). Ton objectif : dans Robot.java, faire en sorte que la santé reste toujours cohérente (bornes, destroyed) afin que le moteur de combat ne puisse plus produire d'états illégaux. La mission est validée quand les tests m2 passent.",
+      "signalement": "Des dégâts négatifs réparent les robots. Les PV passent sous 0. repair() ressuscite des carcasses et dépasse maxHealth.",
+      "reproduire": "Valider m2 (tests unitaires). Les cas takeDamage(-30), takeDamage(9999) et repair sur détruit sont couverts automatiquement.",
+      "attendu": [
+        "takeDamage(x) ignore x <= 0 (aucun effet)",
+        "health ne descend jamais sous 0 ; à 0 le robot est destroyed",
+        "repair ignore les robots détruits et plafonne à maxHealth"
+      ],
+      "files": [
+        {
+          "path": "work/src/arena/robot/Robot.java",
+          "role": "takeDamage, repair"
+        }
+      ],
+      "constraints": [
+        "Ne pas rendre health public",
+        "Les invariants restent protégés par les méthodes"
+      ],
+      "validation": "Mission m2 passed",
+      "hints": [
+        "Liste les états illégaux possibles pour health et destroyed.",
+        "Dans takeDamage, refuse les montants <= 0 puis applique Math.max(0, health - amount).",
+        "Dans repair, sors immédiatement si destroyed ; sinon health = Math.min(maxHealth, health + amount)."
+      ],
+      "notions": [
+        "Encapsulation",
+        "conditions",
+        "invariants"
+      ]
+    },
+    {
+      "id": "m3",
+      "order": 3,
+      "code": "INC-2147-03",
+      "title": "Capacités en panne",
+      "severity": "high",
+      "statusLabel": "Comportements",
+      "contexte": "Tank, Sniper et Medic héritent de Robot mais n'ont pas encore leur identité de combat. Le polymorphisme est en place côté moteur : il manque les redéfinitions (override).",
+      "symptomes": [
+        "Tank : pas de réduction de dégâts (bouclier 8) ; spécial vide",
+        "Sniper : spécial vide (pas de tir critique ATK×2)",
+        "Medic : spécial vide. Dans l'Arène « Essai Medic », Pulse ne soigne pas Bastion"
+      ],
+      "objectif": "Donner enfin une identité de combat à Tank, Sniper et Medic via le polymorphisme. Ces classes héritent de Robot mais leurs capacités sont vides : pas de bouclier, pas de critique, pas de nano-soin. Ton objectif : redéfinir takeDamage / useSpecial dans chaque sous-classe selon le cahier des charges, sans recopier toute Robot. Tu pourras vérifier dans l'Arène (duel, essai Medic) et avec les tests m3.",
+      "signalement": "Tank, Sniper et Medic se comportent comme le robot de base. Bouclier, tir critique et nano-réparation ne font rien.",
+      "reproduire": "Arène → Duel Tank/Sniper ou Essai Medic (soin attendu +40). Ou Valider m3.",
+      "attendu": [
+        "Tank.takeDamage : absorbe 8 points puis appelle super",
+        "Tank spécial : coût 30 EN, 25 dégâts",
+        "Sniper spécial : coût 35 EN, dégâts = ATK × 2",
+        "Medic spécial : coût 25 EN, soin 40 via repair sur la cible"
+      ],
+      "files": [
+        {
+          "path": "work/src/arena/robot/Tank.java",
+          "role": "Bouclier + spécial"
+        },
+        {
+          "path": "work/src/arena/robot/Sniper.java",
+          "role": "Tir critique"
+        },
+        {
+          "path": "work/src/arena/robot/Medic.java",
+          "role": "Nano-réparation"
+        }
+      ],
+      "constraints": [
+        "Redéfinir les méthodes, ne pas dupliquer toute la classe Robot",
+        "Appeler takeDamage / repair / spendEnergy sur les bonnes instances"
+      ],
+      "validation": "Mission m3 passed",
+      "hints": [
+        "Chaque sous-classe doit redéfinir le comportement qui la distingue (override).",
+        "Pour Tank.takeDamage, calcule les dégâts nets puis appelle super.takeDamage(nets).",
+        "Pour useSpecial : vérifie/débité l'énergie, applique l'effet sur target, retourne un SpecialResult cohérent (label, damage, healing, cost)."
+      ],
+      "notions": [
+        "Héritage",
+        "classe abstraite",
+        "redéfinition",
+        "polymorphisme"
+      ]
+    },
+    {
+      "id": "m4",
+      "order": 4,
+      "code": "INC-2147-04",
+      "title": "Registre corrompu",
+      "severity": "medium",
+      "statusLabel": "Intégrité données",
+      "contexte": "Team est le registre des robots d'une équipe. Aujourd'hui il laisse entrer des doublons d'id et expose sa liste interne : un appelant malveillant (ou maladroit) peut vider l'équipe avec clear().",
+      "symptomes": [
+        "addRobot accepte deux robots avec le même id",
+        "findById compare mal les String (risque de ==)",
+        "getRobots() renvoie la liste interne → clear() externe vide vraiment l'équipe"
+      ],
+      "objectif": "Fiabiliser le registre d'équipe. Team laisse entrer des doublons d'identifiant et expose sa liste interne, ce qui permet à un appelant de vider l'équipe avec clear(). Ton objectif : dans Team.java, garantir l'unicité des id à l'ajout, comparer les id correctement, et renvoyer une copie défensive dans getRobots. Les tests m4 vérifient ces trois garanties.",
+      "signalement": "Le registre accepte deux robots avec le même identifiant. Une équipe externe a vidé la liste en appelant clear() sur getRobots().",
+      "reproduire": "Valider m4. Les tests tentent un doublon d'id et un clear() sur le résultat de getRobots().",
+      "attendu": [
+        "addRobot refuse un id déjà présent (retourne false)",
+        "findById compare les chaînes par contenu (.equals)",
+        "getRobots renvoie une copie : clear() externe ne vide pas l'équipe"
+      ],
+      "files": [
+        {
+          "path": "work/src/arena/team/Team.java",
+          "role": "addRobot, findById, getRobots"
+        }
+      ],
+      "constraints": [
+        "Conserver Optional pour findById / findByName",
+        "Ne pas exposer le champ robots en public"
+      ],
+      "validation": "Mission m4 passed",
+      "hints": [
+        "Avant d'ajouter, cherche si findById(robot.getId()) est déjà présent.",
+        "Pour comparer des String d'id, utilise equals et non ==.",
+        "return List.copyOf(robots); ou new ArrayList<>(robots); pour une copie défensive."
+      ],
+      "notions": [
+        "Collections",
+        "identité",
+        "copie défensive"
+      ]
+    },
+    {
+      "id": "m5",
+      "order": 5,
+      "code": "INC-2147-05",
+      "title": "Combat interrompu",
+      "severity": "high",
+      "statusLabel": "Stabilité runtime",
+      "contexte": "Le moteur est prêt à journaliser les échecs (catch ArenaException). Mais performAttack ne signale pas encore les cas impossibles : robot détruit ou sans énergie. Résultat : comportement indéfini / simulation pourrie.",
+      "symptomes": [
+        "Un robot détruit peut encore tenter d'attaquer sans exception métier",
+        "Une attaque sans assez d'énergie n'est pas refusée proprement",
+        "Attendu pédagogique : lever DestroyedRobotException / InsufficientEnergyException"
+      ],
+      "objectif": "Transformer les actions impossibles en erreurs métier contrôlées. Attaquer détruit ou sans énergie ne doit plus pourrir la simulation : il faut lever les exceptions fournies pour que le moteur puisse les journaliser et continuer. Ton objectif : sécuriser performAttack dans CombatEngine (et éventuellement attack dans Robot) avec DestroyedRobotException et InsufficientEnergyException. Les tests m5 valident ces gardes.",
+      "signalement": "Une action impossible (robot détruit, énergie insuffisante) fait échouer toute la simulation au lieu d'être journalisée proprement.",
+      "reproduire": "Valider m5. Les tests forcent une attaque par un robot détruit et une attaque sans énergie.",
+      "attendu": [
+        "performAttack lève DestroyedRobotException si l'attaquant est détruit",
+        "performAttack lève InsufficientEnergyException si énergie < 20",
+        "Le moteur peut attraper ArenaException et continuer (catch déjà prévu dans run)"
+      ],
+      "files": [
+        {
+          "path": "work/src/arena/combat/CombatEngine.java",
+          "role": "performAttack sécurisé"
+        },
+        {
+          "path": "work/src/arena/robot/Robot.java",
+          "role": "éventuellement garde dans attack()"
+        },
+        {
+          "path": "work/src/arena/exception/",
+          "role": "exceptions fournies"
+        }
+      ],
+      "constraints": [
+        "Utiliser les exceptions fournies, ne pas en créer de nouvelles sauf besoin",
+        "Ne pas avaler les exceptions sans les journaliser côté moteur"
+      ],
+      "validation": "Mission m5 passed",
+      "hints": [
+        "Une exception métier décrit un cas prévu : ce n'est pas un crash sauvage.",
+        "En tête de performAttack : if (attacker.isDestroyed()) throw new DestroyedRobotException(...).",
+        "Réutilise ensureEnergy(attacker, 20) déjà présent dans CombatEngine, puis seulement ensuite attaque."
+      ],
+      "notions": [
+        "Exceptions métier",
+        "contrôle de flux"
+      ]
+    },
+    {
+      "id": "m6",
+      "order": 6,
+      "code": "REQ-2147-CHALLENGER",
+      "title": "Nouveau challenger",
+      "severity": "critical",
+      "statusLabel": "Homologation",
+      "contexte": "Dernière étape : concevoir ton propre robot. Le moteur manipule déjà des Robot : si Challenger extends Robot correctement, il participe sans toucher à private/ ni CombatEngine (polymorphisme).",
+      "symptomes": [
+        "Challenger.java est un squelette « À définir »",
+        "Pas encore de stats valides ni de capacité spéciale réelle"
+      ],
+      "objectif": "Concevoir et homologuer ton propre combattant. Challenger est encore un squelette : tu dois choisir des stats dans le budget, implémenter une capacité spéciale réelle, et t'appuyer uniquement sur l'héritage / les interfaces pour qu'il fonctionne dans le moteur existant, sans toucher private/ ni CombatEngine. Objectif final : tests m6 verts + essai réussi dans l'Arène, avec une courte note dans JOURNAL.md.",
+      "signalement": "Chaque binôme doit présenter un combattant original compatible avec le moteur existant, sans modifier private/ ni CombatEngine.",
+      "reproduire": "Complète work/src/arena/robot/Challenger.java, Valider m6, puis Arène → Essai Challenger.",
+      "attendu": [
+        "Stats dans les bornes + budget HP + ATK×3 + EN/2 ≤ 280",
+        "Capacité via SpecialAbility (champ délégué OU Challenger implements SpecialAbility)",
+        "useSpecial appelle cette capacité (label/coût alignés, effet observable)",
+        "Fonctionne par polymorphisme dans BattleRunner / l'Arène"
+      ],
+      "files": [
+        {
+          "path": "work/src/arena/robot/Challenger.java",
+          "role": "Votre robot"
+        },
+        {
+          "path": "work/src/arena/robot/SpecialAbility.java",
+          "role": "Contrat de capacité"
+        }
+      ],
+      "constraints": [
+        "Ne pas modifier le moteur de combat pour « brancher » votre robot",
+        "Respecter le budget de caractéristiques",
+        "Documenter le choix dans work/notes/JOURNAL.md"
+      ],
+      "validation": "Mission m6 passed + essai en arène",
+      "hints": [
+        "Votre classe extends Robot suffit : le moteur manipule des Robot, c'est le polymorphisme.",
+        "Calcule ton budget : hp + atk*3 + energy/2 doit être <= 280.",
+        "Deux options valides : (1) champ private final SpecialAbility … + useSpecial qui délègue ; (2) Challenger implements SpecialAbility. Le label et le coût du SpecialResult doivent matcher abilityName()/energyCost()."
+      ],
+      "notions": [
+        "Conception objet",
+        "interface",
+        "polymorphisme",
+        "réutilisation"
+      ]
+    }
+  ]
+}
