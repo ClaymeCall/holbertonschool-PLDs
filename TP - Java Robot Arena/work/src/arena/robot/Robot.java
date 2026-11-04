@@ -27,6 +27,8 @@ public abstract class Robot {
         // BUG Mission 1 : this manquant / initialisation incomplète
         this.id = id;
         this.name = name;
+        this.id = id;
+        this.name = name;
         this.maxHealth = maxHealth;
         this.attackPower = attackPower;
         this.health = maxHealth;
@@ -81,18 +83,31 @@ public abstract class Robot {
      */
     public void takeDamage(int amount) {
         // BUG Mission 2 : n'empêche pas les dégâts négatifs ni le dépassement
-        health -= amount;
-        if (health <= 0) {
-            destroyed = true;
+  
+        if (health > 0 && amount > 0){
+            if ((health - amount) < 0){
+                health = 0;
+                destroyed = true;
+            }
+            else{
+                health -= amount;
+                }
+            }
         }
-    }
-
-    /**
+        /**
      * Répare le robot.
      */
     public void repair(int amount) {
         // BUG Mission 2 : pas de plafond maxHealth, pas de refus si détruit
-        health += amount;
+        if (health > 0){
+            if ((health + amount) > maxHealth){
+                health = maxHealth;
+            }
+            else{
+                health += amount;
+            }
+        }
+ 
     }
 
     /**
