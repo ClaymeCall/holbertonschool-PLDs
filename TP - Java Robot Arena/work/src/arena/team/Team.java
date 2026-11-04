@@ -33,7 +33,7 @@ public class Team {
      */
     public boolean addRobot(Robot robot) {
         // BUG Mission 4 : aucun contrôle de doublon
-        if (robot == null) {
+        if (robot == null || findById(robot.getId()).isPresent()) {
             return false;
         }
         robots.add(robot);
@@ -43,7 +43,7 @@ public class Team {
     public Optional<Robot> findById(String id) {
         // BUG Mission 4 : comparaison incorrecte possible
         for (Robot r : robots) {
-            if (r.getId() == id) {
+            if (r.getId().equals(id)) {
                 return Optional.of(r);
             }
         }
@@ -68,7 +68,7 @@ public class Team {
      */
     public List<Robot> getRobots() {
         // BUG Mission 4 : exposition de la liste mutable interne
-        return robots;
+        return List.copyOf(robots);
     }
 
     public List<Robot> aliveRobots() {
