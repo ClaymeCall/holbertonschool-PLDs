@@ -19,9 +19,9 @@ public class Tank extends Robot {
 
     @Override
     public void takeDamage(int amount) {
-        // BUG Mission 3 : ignore le bouclier passif : doit absorber SHIELD_ABSORB
+
         // Comportement attendu : dégâts reçus = max(0, amount - SHIELD_ABSORB)
-        super.takeDamage(amount);
+        super.takeDamage(amount - SHIELD_ABSORB);
     }
 
     @Override
@@ -29,6 +29,8 @@ public class Tank extends Robot {
         // BUG Mission 3 : capacité non implémentée
         // Attendu : coûte SPECIAL_COST, inflige SPECIAL_DAMAGE à la cible
         // (via takeDamage), retourne un SpecialResult cohérent.
-        return new SpecialResult("Bouclier d'impact", 0, 0, 0);
+        target.takeDamage(SPECIAL_DAMAGE);
+        this.energy -= SPECIAL_COST;
+        return new SpecialResult("Bouclier d'impact", SPECIAL_DAMAGE, 0, SPECIAL_COST);
     }
 }

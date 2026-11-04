@@ -20,13 +20,16 @@ public class Sniper extends Robot {
     public int attack(Robot target) {
         // BUG Mission 3 : devrait infliger attackPower (pas attaque générique incorrecte)
         // Le coût énergie reste 20 via la logique de base une fois corrigée.
-        return super.attack(target);
+        return this.getAttackPower();
     }
 
     @Override
     public SpecialResult useSpecial(Robot target) {
         // BUG Mission 3 : non implémenté
         // Attendu : coûte SPECIAL_COST, dégâts = (int)(getAttackPower() * CRIT_MULTIPLIER)
-        return new SpecialResult("Tir critique", 0, 0, 0);
+        int specialDamage = (int)(getAttackPower() * CRIT_MULTIPLIER);
+        target.takeDamage(specialDamage);
+        this.energy -= SPECIAL_COST;
+        return new SpecialResult("Tir critique", specialDamage, 0, SPECIAL_COST);
     }
 }
