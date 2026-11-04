@@ -18,20 +18,19 @@ public abstract class Robot {
     private final int maxHealth;
     private final int attackPower;
 
-    // BUG Mission 1 : ce champ ne doit PAS être static
-    protected static int energy;
+    protected int energy;
 
     protected int health;
     protected boolean destroyed;
 
     public Robot(String id, String name, int maxHealth, int attackPower, int energy) {
         // BUG Mission 1 : this manquant / initialisation incomplète
-        id = id;
-        name = name;
+        this.id = id;
+        this.name = name;
         this.maxHealth = maxHealth;
         this.attackPower = attackPower;
         this.health = maxHealth;
-        Robot.energy = energy; // partage global : à corriger
+        this.energy = energy;
         this.destroyed = false;
     }
 
@@ -123,7 +122,7 @@ public abstract class Robot {
             return false;
         }
         // BUG Mission 1 : == compare les références, pas le contenu
-        return name == other.name;
+        return name.equals(other.name);
     }
 
     @Override
